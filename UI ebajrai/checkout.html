@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title> Checkout </title>
+        
+        <link rel="stylesheet" href="base_style.css">
+        
+        <style>
+            
+            .cart {
+                display: grid;
+                grid-template-columns: 1fr 200px 200px 200px;
+                grid-template-rows: 1fr;
+                grid-row-gap: 15px;
+                width: 1000px;
+            }
+            
+            .base {
+                background-color: white;
+                padding: 20px 0px 20px 50px;
+                margin: auto;
+                border: 1px solid #E5E4E2;
+                border-radius: 0.8em 0.8em 0.8em 0.8em;
+                line-height: 2.0;
+            }
+            
+            .kotak {
+                display: grid;
+                width: 1100px;
+                grid-template-columns: 550px 550px;
+                grid-template-rows: 1fr 1fr;
+                margin: auto;
+            }
+            
+            .paymenthod {
+                display: grid;
+                width: 460px;
+                grid-template-columns: 230px 230px;
+                grid-template-rows: 1fr;
+                background-color: white;
+                margin: auto;
+                border: 1px solid #E5E4E2;
+                border-radius: 0 0 0.8em 0.8em;
+                padding: 20px 20px 20px 20px;
+                line-height: 2.0;
+                grid-row-gap: 20px;
+            }
+            
+            .atas {
+                border-bottom: none; 
+                border-radius: 0.8em 0.8em 0 0; 
+                font-size: 18px; 
+                font-weight: bold;
+            }
+            
+            .btn{
+                background-color: #53B175; 
+                padding: 12px 120px 12px 120px; 
+                border: none; 
+                color: white;
+                font-family: serif;
+                font-size: 16px;
+            }
+            
+            .btn:hover {text-decoration: underline;}
+            .bawah {border-radius: 0 0 0.8em 0.8em}
+            .satu { grid-area: 1/1/2/3; padding: 0 0 0 20px;}
+            .option { width: 450px; }
+            
+        </style>
+        
+        <script type="text/javascript">
+            
+            var image = ["Apple.jpg", "Banana.jpg", "Chicken.jpg"];
+            var product = ["Red Apple", "Organic Banana", "Whole Fresh Chicken"];
+            var unitprice = ["0.90", "5.60", "8.50"];
+            var quantity = ["6", "2", "1"];
+            var totalprice = new Array(3);
+            var totalall=0;
+            
+            for (i=0; i<3; i++) {
+                totalprice[i] = unitprice[i] * quantity[i];
+                totalall = totalall + totalprice[i];
+            }
+            totalall = totalall.toFixed(2);
+            
+            function isEmpty() {
+                var group1Checked 
+                var group2Checked
+
+                for (var i=0; i<document.form.pay.length; i++) {
+                   if (document.form.pay[i].checked) {
+                       group1Checked = document.form.pay[i].value
+                }}
+
+                for (var i=0; i<document.form.del.length; i++) {
+                   if (document.form.del[i].checked) {
+                       group2Checked = document.form.del[i].value
+                }}
+
+                if(!group1Checked){
+                   alert("Please choose your payment method.")
+                }
+                else if(!group2Checked){
+                   alert("Please choose your delivery method.")
+                }
+                else{
+                   window.location.href="checkout2.html";
+                }
+            }
+    
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div class="top">
+            <img src="images/logo.png" width="80pixels" height="80pixels">
+            <div style="padding-top: 25px"> E-Bajrai Mini Market </div>
+            <div class="menu">
+                <div> <a href="shop.html"> Shop </a> </div>
+                <div> <a href="cart.html"> Cart </a> </div>
+                <div> <a href="order.html"> Order </a> </div>
+            </div>
+            <div class="user"> <a href="profile.html"><img src="images/user.jpg" width="35pixels" height="35pixels"></a> </div>   
+        </div>
+        
+        <div class="title">
+            <b>Checkout</b>
+        </div>
+        
+        <br><br><br>
+        
+        <div class="base cart atas">
+            <div> Product Ordered </div>
+            <div> Unit Price </div>
+            <div> Quantity </div>
+            <div> Item subtotal </div>
+        </div>
+        
+        <div class="base cart" style="border-bottom: none; border-radius: 0 0 0 0">
+        <script type="text/javascript">
+        
+            for (i=0; i<3; i++) 
+            {   
+                totalprice[i] = totalprice[i].toFixed(2);
+                
+                document.write("<div style='text-align:left;'> <img src=images/" + image[i] +" width='80pixels' height='80pixels' valign='middle'> &emsp;&emsp;&emsp;" + product[i] + "</div>");
+                document.write("<div style='padding-top:30px;'> RM " + unitprice[i] + "</div>");
+                document.write("<div style='padding-top:30px;'>" + quantity[i] + "</div>");
+                document.write("<div style='padding-top:30px;'> RM " + totalprice[i] + "</div>");
+            }
+            
+        </script>
+        </div> 
+        
+        <div class="base cart bawah">
+            <div></div><div></div>
+            <div><b> Order Total : </b></div>
+            <div> RM
+            <script type="text/javascript"> document.write(totalall); </script> </div>
+        </div> <br><br>
+        <form name="form">
+        <div class="kotak">
+        
+        <div>
+            <div class="base atas option"> Payment Method </div>
+            
+            <div class="paymenthod">
+                <div class="satu"> Please choose your payment method : <br></div> 
+                <div>  
+                    <input type="radio" name="pay" value="cash">  
+                    <img src="images/cash.jpg" width="170pixels"> 
+                </div>  
+                <div> 
+                <img src="images/o9.jpg" width="170pixels"> <br>
+                    
+                <input type="radio" name="pay" value="maybank"> Maybank2u <br>
+                <input type="radio" name="pay" value="cimb"> CIMB Clicks <br>
+                <input type="radio" name="pay" value="rhb"> RHB Now <br>
+
+                </div>
+            </div> 
+                
+        </div>
+               
+        <div>
+            <div class="base atas option"> Delivery Method </div>
+            
+            <div class="paymenthod">
+                <div class="satu"> Please choose your delivery method : </div> 
+                <div>  
+                    <input type="radio" name="del" value="pickup">  
+                    <img src="images/pickup.jpg" width="170pixels"> 
+                </div>  
+                <div> 
+                    <input type="radio" name="del" value="delivery"> 
+                    <img src="images/delivery.jpg" width="170pixels">
+                </div>
+                <div style="padding: 30px 0 0 80px"> <input type="button" onClick="isEmpty()" value="Confirm" class="btn"> </div>
+            </div> 
+            
+        </div>
+        </div></form>
+    </body>
+
+</html>
