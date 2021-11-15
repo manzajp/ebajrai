@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title> About Us </title>
+
+        <link rel="stylesheet" href="base_style.css">
+
+        <style>
+          .container{
+            margin-top: 30px;
+                width: 1200px;
+                height: 500px;
+                margin-left: auto;
+                margin-right: auto;
+                background-color: white;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(5, 1fr);
+                border-radius: 0.8em;
+          }
+
+          .pic {
+            grid-column: 1/3;
+            grid-row: 1/6;
+            padding-left: 30px;;
+          }
+          .oper {
+            grid-column: 3/6;
+            grid-row: 2/4;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          .desc {
+            grid-column: 3/6;
+            grid-row: 1/2;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          .contact {
+            grid-column: 3/6;
+            grid-row: 4/6;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          h3{
+            color: #53B175;
+          }
+        </style>
+
+    </head>
+
+    <body>
+
+        <div class="top">
+            <img src="images/logo.png" width="80pixels" height="80pixels">
+            <div style="padding-top: 25px"> E-Bajrai Mini Market </div>
+            <div class="menu">
+                <div> <a href=""> Shop </a> </div>
+                <div> <a href=""> Products </a> </div>
+                <div> <a href=""> Orders </a> </div>
+                <div> <a href=""> Analytics </a> </div>
+            </div>
+        </div>
+
+        <div class="title">
+            <b> About Us </b>
+        </div>
+
+        <div class="container">
+          <div class="pic">
+            <h3>Our Shop:</h3>
+            <img src="images/shop_pic.png" alt="Our Shop" width="409px" height="174px">
+            <br><br><br>
+            <img src="images/shop_inside.png" alt="Shop" width="409px" height="174px">
+          </div>
+          <div class="desc">
+            <h3>Description:</h3>
+            <p><b>Pasar Mini Bajrai</b> is a mini market or grocery shop located in No. 1 Jalan Ampuan, 83000 Batu Pahat, Johor.
+              We provides basic needs by people for their daily life such as food, chicken, meat, sugar, flour,
+               and a variety types of rice, spices and seasonings. Other than that, We
+               also provides frozen foods such as roti canai, donuts and curry puffs.
+            </p>
+          </div>
+          <div class="oper">
+            <h3>Operating Date and Time:</h3>
+            <b>Monday-Thursday: </b>9.00A.M. - 6.00P.M.<br>
+            <b>Friday: </b>8.30A.M. - 12.00P.M., 3.00P.M. - 6.00P.M.<br>
+            <b>Saturday: </b>8.00A.M. - 2.00P.M.<br>
+            <b>Location: </b>No. 1 Jalan Ampuan, 83000 Batu Pahat, Johor<br>
+          </div>
+          <div class="contact">
+            <h3>Contact Us:</h3>
+            <b>Phone Number: </b>07-431 2446<br>
+            <b>Fax: </b>07-4342446<br>
+          </div>
+        </div>
+
+    </body>
+
+</html>
