@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title> Add Product </title>
+        
+        <link rel="stylesheet" href="base_style.css">
+        <link rel="stylesheet" type="text/css" href="astyle.css">
+        
+        <style>
+            
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .user_card {
+                height: 600px;
+                width: 500px;
+                padding: 0 80px 0 80px;
+            }
+            
+            .bahagi {
+                display: grid;
+                grid-template-columns: 150px 350px;
+                grid-template-rows: 40px 40px 40px 40px 40px 40px 40px;
+                grid-row-gap: 15px;
+            }
+            
+            input, textarea {
+                border: 1px solid darkgray;
+                border-radius: 3px;
+                height: 30px;
+                width: 350px;
+                background-color: #fafafa;
+            }
+            
+            button {
+                background-color: #53B175;
+                color: white;
+                border: 2px solid #53B175;
+                width: 40%;
+                height: 35px;
+                border-radius: 10px;
+                font-family: Times New Roman;
+                font-size: 15px;
+            }
+            
+        </style>
+    
+    </head>
+    
+    <body>
+        
+        <div class="top">
+            <img src="images/logo.png" width="80pixels" height="80pixels">
+            <div style="padding-top: 25px"> E-Bajrai Mini Market </div>
+            <div class="menu">
+                <div> <a href=""> Shop </a> </div>
+                <div> <a href=""> Products </a> </div>
+                <div> <a href=""> Orders </a> </div>
+                <div> <a href=""> Analytics </a> </div>
+            </div>
+        </div>
+        
+        <div class="title">
+            <b> Add Product </b>
+        </div><br><br>
+        
+        <div class="container">
+            <div class="user_card">
+                <h2 style="text-align: center"> Add New Product </h2> <br>
+                <form>
+                    <div class="bahagi">
+                        <div> Product name </div>
+                        <div> <input type="text" name="name"> </div>
+                        <div> Description </div> 
+                        <div> <textarea name="desc"> </textarea> </div>
+                        <div> Stock Quantity </div> 
+                        <div> <input type="number" name="quantity"> </div>
+                        <div> Price </div>
+                        <div> <input type="number" name="price"> </div>
+                        <div> Category </div>
+                        <div> <input type="text" name="category"> </div>
+                        <div> Packing Size </div>
+                        <div> <input type="text" name="package"> </div>
+                        <div> Product Image </div>
+                        <div> <input type="file" name="image" style="background-color: white; border: none"> </div>
+                    </div>
+                </form><br><br>
+                <div style="display: flex; justify-content: flex-end"><button> Add Product </button></div>
+            </div>
+        </div>
+    
+    </body>
+
+</html>
