@@ -3,7 +3,7 @@
     
     <head>
         
-        <title> User Registration </title>
+        <title> Login </title>
         <link rel="stylesheet" href="base_style.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
@@ -27,7 +27,7 @@
             }
             
             .user_card{
-                height: 600px;
+                height: 420px;
                 width: 500px;
                 padding: 80px;
             }
@@ -35,16 +35,6 @@
             .top {
                 text-align: center;
                 justify-content: center;
-            }
-            
-            footer{
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                background: #53B175;
-                padding: 20px;
-                text-align: center;
-                color: white;
             }
 
         </style>
@@ -56,8 +46,7 @@
         <div class="top">
             <img src="images/logo.png" width="80pixels" height="80pixels">
             <div style="padding-top: 25px">E-Bajrai Mini Market </div>
-        </div>
-        <br><br>
+        </div><br><br>
 
         <div class="container h-100">
             <div class="d-flex justify-content-center h-100">
@@ -67,21 +56,12 @@
                             <div class="row"> 
                                 <div class="col-sm">
 
-                                    <h2 style="text-align: center"> Sign Up </h2>
+                                    <h2 style="text-align: center"> Login </h2>
                                     <p style="text-align: center; color: gray"> Enter your credentials to continue </p>
-                                    <hr class="mb-3">
-
-                                    <label for="fname"> <b>First Name</b> </label>
-                                    <input class="form-control" type="text" name="fname" required>
-
-                                    <label for="lname"> <b>Last Name</b> </label>
-                                    <input class="form-control" type="text" name="lname" required>
+                                    <hr class="mb-3"><br>
 
                                     <label for="email"> <b>Email Address</b> </label>
                                     <input class="form-control" type="email" name="email" required>
-
-                                    <label for="phoneno"> <b>Phone Number</b> </label>
-                                    <input class="form-control" type="text" name="phoneno" required>
 
                                     <label for="pswd"> <b>Password</b> </label>
                                     <input class="form-control" type="password" name="pswd" required>
@@ -91,7 +71,7 @@
                                     
                                     <div class="mt-4">
                                         <div class="d-flex justify-content-center links">
-                                            Already have an account? &nbsp; <a href="login.html" style="color: #53B175; text-decoration: none">Login</a>
+                                            Don't have an account? &nbsp; <a href="register.html" style="color: #53B175; text-decoration: none">Sign Up</a>
                                         </div>
                                     </div>
                                 </div>
@@ -101,9 +81,6 @@
                 </div>
             </div>
         </div>
-        <footer>
-            <p>© Copyright 2021 Bajrai Mini Market, Inc.</p>
-        </footer>
 
     </body>
     
