@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title> Order Status </title>
+        
+        <link rel="stylesheet" href="base_style.css">
+        
+        <style>
+            
+            .base {
+                background-color: white;
+                padding: 20px 0px 20px 50px;
+                margin: auto;
+                border: 1px solid #E5E4E2;
+                border-radius: 0.8em 0.8em 0.8em 0.8em;
+                line-height: 2.0;
+                width: 500px;
+            }
+            
+        
+        </style>
+        
+        <script type="text/javascript">
+            
+            var image = ["Apple.jpg", "Banana.jpg", "Chicken.jpg"];
+            var product = ["Red Apple", "Organic Banana", "Whole Fresh Chicken"];
+            var unitprice = ["0.90", "5.60", "8.50"];
+            var quantity = ["6", "2", "1"];
+            var totalprice = new Array(3);
+            var totalall=0;
+            
+            for (i=0; i<3; i++) {
+                totalprice[i] = unitprice[i] * quantity[i];
+                totalall = totalall + totalprice[i];
+            }
+            totalall = totalall.toFixed(2);
+    
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div class="top">
+            <img src="images/logo.png" width="80pixels" height="80pixels">
+            <div style="padding-top: 25px"> E-Bajrai Mini Market </div>
+            <div class="menu">
+                <div> <a href="edit_shop_details.html"> Shop </a> </div>
+                <div> <a href="admin_products.html"> Products </a> </div>
+                <div> <a href="admin_orders.html"> Orders </a> </div>
+                <div> <a href="adminSalesReport.php"> Analytics </a> </div>
+            </div>
+        </div>
+        
+        <div class="title">
+            <b> Order Status </b>
+        </div>
+        <br>
+        
+        <div class="base">
+            <form name="statusform">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <div>
+                    <input type="radio" name="status" value="pending" checked> Pending <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <img src="images/pending.png" width="170pixels">
+                </div>
+                <div>
+                    <input type="radio" name="status" value="processing"> Processing <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <img src="images/processing.png" width="170pixels">
+                </div>
+                <div>
+                    <input type="radio" name="status" value="shipped"> Shipped <br>
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                    <img src="images/shipped.jpg" width="170pixels">
+                </div>
+                <br><br>
+                
+                <a href="admin_orders.html" style="background-color: #53B175; padding: 12px 160px 12px 160px; border-radius: 0.8em 0.8em 0.8em 0.8em"> Confirm Status </a>  
+                
+            </form>
+        </div>
+    </body>
+
+</html>
