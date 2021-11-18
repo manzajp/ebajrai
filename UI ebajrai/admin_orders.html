@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        
+        <title> Orders </title>
+        
+        <link rel="stylesheet" href="base_style.css">
+        
+        <style>
+    
+            .table {
+                display: grid;
+                grid-template-columns: 1fr 150px 150px 150px 120px 120px;
+                grid-template-rows: 1fr;
+                width: 1400px;
+                background-color: white;
+                padding: 30px 30px 30px 30px;
+                margin: auto;
+                border: 1px solid #E5E4E2;
+                border-radius: 0.8em 0.8em 0.8em 0.8em;
+                grid-row-gap: 15px;
+                text-align:center;
+            }
+            
+            .tableheader {font-weight: bold; font-size: 18px;}
+        
+        </style>
+        
+        <script type="text/javascript">
+            
+            var name = ["Muhammad Kamarul", "Siti Azizah", "Alia Nabihah", "Hanif Farhan", "Kamariah Mohamad"];
+            var contact = ["011-40429382", "013-7489274", "012-7928493", "019-7482934", "016-7289374"];
+            var date = ["12/10/2021", "15/10/2021", "19/10/2021", "20/10/2021", "22/10/2021"];
+            var id = ["Order1274", "Order1275", "Order1276", "Order1277", "Order1278"];
+            var order = ["order1.html", "order2.html", "order3.html", "order4.html", "order5.html"];
+    
+        </script>
+    
+    </head>
+    
+    <body>
+        
+        <div class="top">
+            <img src="images/logo.png" width="80pixels" height="80pixels">
+            <div style="padding-top: 25px"> E-Bajrai Mini Market </div>
+            <div class="menu">
+                <div> <a href="edit_shop_details.html"> Shop </a> </div>
+                <div> <a href="admin_products.html"> Products </a> </div>
+                <div> <a href="admin_orders.html"> Orders </a> </div>
+                <div> <a href="adminSalesReport.php"> Analytics </a> </div>
+            </div>
+        </div>
+        
+        <div class="title">
+            <b> Orders </b>
+        </div> <br>
+        
+        
+        <div class="table tableheader">
+            <div> Name </div>
+            <div> Contact Number </div>
+            <div> Date </div>
+            <div> Order ID </div>
+            <div> Order </div>
+            <div> Status </div>
+        </div> <br>
+        
+        
+        <div class="table">
+            <script type="text/javascript">
+
+                for (i=0; i<5; i++) 
+                { 
+                    document.write("<div style='padding-top:30px;'>" + name[i] + "</div>");
+                    document.write("<div style='padding-top:30px;'>" + contact[i] + "</div>");
+                    document.write("<div style='padding-top:30px;'>" + date[i] + "</div>");  
+                    document.write("<div style='padding-top:30px;'>" + id[i] + "</div>"); 
+                    document.write("<div style='padding-top:30px;'> <a href='" + order[i] +"' style='background-color: #53B175; padding: 12px 18px 12px 18px'> View </a> </div>");
+                    document.write("<div style='padding-top:30px;'> <a href='order_status.html' style='background-color: #53B175; padding: 12px 18px 12px 18px'> View </a> </div>");
+                }
+
+            </script>
+            <br><br>
+        </div>
+    
+    </body>
+
+</html>
