@@ -1,0 +1,58 @@
+
+body {
+    background-color: #F5F8F2;
+    color: darkslategray;
+}
+            
+.top {
+    display: flex;
+    background-color: #53B175;
+    padding: 5px 30px 5px 30px;
+    color: white;
+    font-size: 30px;
+    font-family: 'Lucida Calligraphy', cursive;
+}
+            
+ .menu {
+    width: 400px;
+    display: flex;
+    padding-top: 30px;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: serif;
+    margin-left: auto;
+}
+
+.user {
+    margin-left: 50px;
+    padding-top: 25px;
+    padding-right: 10px;
+}
+         
+.title {
+    display: flex;
+    background-color: white;
+    padding: 15px;
+    font-size: 25px;
+    justify-content: center;
+    color: #53B175;
+    font-family: serif;
+    border: 1px solid gainsboro;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    text-decoration: underline;
+}
